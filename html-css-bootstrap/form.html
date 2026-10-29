@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+
+<body>
+    <form action="" method="" required autocomplete="">
+        <fieldset>
+            <legend>LEARN FORM</legend>
+        <label for="nameInput">Enter Yout Name</label>
+        <input type="text" id="nameInput" placeholder="Enter Your name">
+        <br>
+        <label for="ageInput">Enter Age</label>
+        <input type="number" id="ageInput" value="100" name="age"><br>
+        <label for="">Birth Date</label>
+        <input type="date">
+        <label for="">Appointment </label>
+        <input type="datetime-local">
+        <label for="">Upload File</label>
+        <input type="file">
+        <br>
+        <label for="emailInput">Email</label>
+        <input type="email" name="email" id="emailInput" required>
+        <label for="password">Password</label>
+        <input type="password">
+        <label for="contactNumber">Enter Contact Number</label>
+        <input type="tel" id="contactNumber" pattern="\+91-[^9876]{1}[0-9]{9}\">
+
+        <!-- +91-[^9876]{1}[0-9]{9} -->
+
+        <!-- [A-Za-z0-9._]$@gmail.com -->
+        select value 
+
+        <input type="range" min="0" max="2000" value="1800">
+        
+        <input type="hidden">
+        <hr>
+
+        radio 
+        checkbox 
+        textarea
+
+        <textarea name="" id="" rows="10" cols="10"></textarea>
+
+<label for="">Select Gender</label>
+<input type="radio" name="gender" value="m">Male
+<input type="radio" name="gender" value="f">Female 
+<br>
+
+<label for="">Select Vehicals</label>
+<input type="checkbox" name="vehical1" value="cycle">Cycle
+<input type="checkbox" name="vehical2" value="access">Without Gear 
+<input type="checkbox" name="vehical3" value="Hunter">With Gear 
+<input type="checkbox" name="vehical4" value="Baleno">Four Wheeler
+
+<select name="dept" id="">
+    <option value="">Select Department</option>
+    <option value="hr">HR</option>
+    <option value="it">IT</option>
+    <option value="fn">Finance</option>
+</select>
+
+
+
+        <button>Register</button>
+        <input type="submit" value="REGISTER">
+        <input type="button" value="LOGIN">
+        <input type="reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>

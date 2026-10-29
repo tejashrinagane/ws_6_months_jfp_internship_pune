@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sizeIMG {
+            width: 200px;
+            height: 200px;
+        }
+
+        img[alt] {
+            border: 5px solid orange !important;
+        }
+
+        img[alt='gold'] {
+            border: 5px solid red;
+        }
+
+        img[alt~='nature'] {
+            border: 5px solid gray;
+        }
+
+        img[alt|="plus"] {
+            border: 5px solid green;
+        }
+
+        img[alt*="some"] {
+            border: 5px solid blue;
+        }
+
+        img[alt^="111"] {
+            border: 5px solid yellow;
+        }
+
+        img[alt$="45"] {
+            border: 5px solid brown;
+        }
+        div > p {
+            color: pink;
+        }
+        .divDemo p{
+            color: red;
+        }
+        div ~ p{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>11111Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+        <p>2222Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+        <p>3333Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+        <div class="divDemo">
+            <p>div111111 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+            <p>div222222 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+        </div>
+        <p>4444Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ipsum.</p>
+
+    </div>
+    <img src="./assets/redFlag.jpeg" class="sizeIMG">
+    <img src="./assets/gold-plus.jpeg" alt="gold" class="sizeIMG">
+    <img src="./assets/nature-gold.jpeg" alt="nature gold" class="sizeIMG">
+    <img src="./assets/plus-gold.jpeg" alt="plus-gold" class="sizeIMG">
+    <img src="./assets/somegold.jpeg" alt="someplusgold" class="sizeIMG">
+    <img src="./assets/nature-gold.jpeg" alt="11111fghjk" class="sizeIMG">
+    <img src="./assets/nature-gold.jpeg" alt="fghjk454545" class="sizeIMG">
+    <p>Out of div</p>
+</body>
+
+</html>

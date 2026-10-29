@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div.layout{
+            display: grid;
+            grid-template-areas:'nav nav nav nav nav nav nav nav nav nav nav nav'
+                                'ls ls m m m m m m m m rs rs'
+                                'ls ls s1 s1 s1 s1 s2 s2 s2 s2 rs rs'
+                                'f f f f f f f f f f f f';
+            gap:10px
+        }
+        nav{
+            height: 100px;
+            background-color: pink;
+            grid-area: nav;
+        }
+        aside.leftAside{
+            height: 90vh;
+            background-color: rgb(154, 243, 255);
+            grid-area: ls;
+        }
+        aside.rightAside{
+            height: 90vh;
+            background-color: chocolate;
+            grid-area: rs;
+        }
+        main{
+            height: 50vh;
+            background-color: cornsilk;
+            grid-area: m;
+        }
+        .sectionOne{
+            border: 2px solid red;
+            height: 200px;
+            grid-area: s1;
+        }
+        .SectionTwo{
+            border: 2px solid green;
+            height:200px;
+            grid-area: s2;
+        }
+        footer{
+            height: 100px;
+            background-color: gray;
+            grid-area: f;
+        }
+        .containerCard{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(4, 1fr);
+            gap:10px;
+            width: 90%;
+            margin: 10px auto;
+        }
+        .card{
+            /* display: inline-block; */
+            width: 18rem;
+            height: 320px;
+            border: 1px solid gray;
+        }
+        .card img{
+            width: 100%;
+            height: 50%;
+        }
+        .fruitsContainer{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: 1fr 2fr 2fr; */
+            gap:10px
+        }
+        .grapes{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: rgb(55, 24, 55);
+            height: 100px;
+        }
+        .strawberry{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: rgb(157, 41, 66);
+            height: 100px
+        }
+        .watermelon{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: red;
+            height: 200px;
+        }
+        .orange{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: orange;
+            height: 100px
+        }
+        .papaya{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: rgb(198, 147, 28);
+            height: 150px;
+        }
+        .pinapple{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: rgb(67, 50, 27);
+            height: 150px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fruitsContainer">
+        <div class="grapes"></div>
+        <div class="strawberry"></div>
+        <div class="watermelon"></div>
+        <div class="orange"></div>
+        <div class="papaya"></div>
+        <div class="pinapple"></div>
+    </div>
+
+    <div class="containerCard">
+        <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+         <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+         <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+         <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+         <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="../assets/gold-plus.jpeg" alt="">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+
+    <div class="layout">
+    <nav></nav>
+    <aside class="leftAside"></aside>
+    <main></main>
+    <section class="sectionOne"></section>
+    <section class="SectionTwo"></section>
+    <aside class="rightAside"></aside>
+    <footer></footer>
+    </div>
+</body>
+</html>
+
+
+EQYTPU

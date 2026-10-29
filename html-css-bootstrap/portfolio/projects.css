@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+}
+.projectContainer{
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+    margin:10px 30px
+}
+.card{
+    border: 1px solid white;
+    width: 18rem;
+}
+.cardImg{}
+.cardTitle{}
+.cardDescri{}
+.icons{}
+.btnCArd{}
+
+
+@media screen and (min-width:301px) and (max-width:700px){
+    body{
+        background-color: gray;
+    }
+    .projectContainer{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width:300px){
+    body{
+        background-color: brown;
+    }
+    .projectContainer{
+        flex-direction: column;
+    }
+}

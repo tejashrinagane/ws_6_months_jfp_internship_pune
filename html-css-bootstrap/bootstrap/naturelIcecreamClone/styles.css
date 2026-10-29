@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(244, 255, 230)!important;
+}
+.customHeader{
+    background-color: rgb(51, 153, 22);
+}
+
+.customVideo{
+    width: 100%;
+    height: 400px;
+}
+.customFranchiesEffect{
+    overflow: hidden;
+}
+.customFranchiesEffect img{
+    width: 100%;
+    height: 450px;
+    transition: transform 2s;
+}
+.customFranchiesEffect:hover img{
+    transform: scale(1.2,1.2);
+}
+.customCorousel{
+    height: 700px;
+}
+.customCoroImg{
+    height: 700px;
+}
+
+.customCard{
+    overflow: hidden;
+    position: relative;
+}
+.customCard img{
+    transition: transform 2s;
+}
+.customCard img:hover{
+    transform: scale(1.1,1.1);
+}
+.eyeIcon{
+    background-color: white;
+    color:rgb(51, 153, 22);
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+.customCard:hover .eyeIcon{
+    display: block;
+} 
+
+.btnQuickView{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    display: none;
+    /* z-index: 100000; */
+}
+.eyeIcon:hover .btnQuickView{
+    display: block;
+}   

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .headerOne{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            height: 100px;
+            vertical-align: center;
+        }
+        .mainContainer{
+            display: flex;
+        }
+.yellowBox{
+    background-color: yellow;
+    padding: 30px;
+    flex: 1;
+    order: 1;
+}
+.blueBox{
+    background-color: blue;
+    padding: 30px;
+    flex:3;
+    order: 2;
+
+}
+.pinkBox{
+    background-color: pink;
+    padding: 30px;
+    flex: 1;
+    order: 3;
+
+}
+        .footer{
+            background-color: greenyellow;
+            padding: 30px;
+        }
+
+
+@media screen and (min-width:400px) and (max-width:900px){
+    .mainContainer{
+        flex-wrap: wrap;
+
+    }
+        .yellowBox{
+            order: 2;
+            flex: 50%;
+        }
+        .blueBox{
+            order: 1;
+            flex: 100%;
+        }
+        .pinkBox{
+            order: 3;
+            flex: 50%;
+        }
+}
+
+
+@media screen and (max-width:399px){
+.mainContainer{
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+.yellowBox, .blueBox, .pinkBox{
+    flex: 100%;
+}
+.blueBox{
+    font-size: 10px;
+}
+}
+    </style>
+</head>
+<body>
+        <header class="headerOne">HEADER</header>
+
+    <main class="mainContainer">
+        <aside class="yellowBox">ASIDE BAR</aside>
+        <section class="blueBox">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur ipsum praesentium aut, reiciendis provident debitis earum consectetur beatae, est dolor molestiae doloremque placeat quisquam similique sed eligendi, consequuntur distinctio! Ducimus voluptatum tempora tenetur! Laudantium cupiditate aspernatur, deserunt incidunt inventore neque animi impedit, qui, officiis porro ipsa vero dolore cumque harum?</section>
+        <section class="pinkBox">ASIDEBAR</section>
+
+    </main>
+    <footer class="footer">FOOTER</footer>
+</body>
+</html>

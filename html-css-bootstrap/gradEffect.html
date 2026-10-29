@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        .bgImg{
+            /* height: 200px; */
+            background-image: url('./assets/nature-gold.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        .linearGRad{
+            background-image: linear-gradient(to right bottom, green,pink, black);
+        }
+        .radialGrad{
+            background-image: radial-gradient(yellow ,white, black);
+        }
+        .conicGrad{
+            background-image: conic-gradient(black, yellow);
+        }
+        .overFlowDemo{
+            /* overflow: hidden; */
+            overflow: scroll;
+        }
+        /* .overFlowDemo:hover{
+            overflow: visible;
+        } */
+        .DemoTwo{
+            width: 700px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .DemoTwo img{
+            width: 700px;
+            height: 300px;
+            transition: transform 1s;
+        }
+        .DemoTwo:hover img{
+            transform: scale(1.2,1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="DemoTwo">
+        <img src="./assets/plus-gold.jpeg" alt="">
+    </div>
+    <div class="box overFlowDemo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus consequuntur amet iure corrupti accusantium ullam odio temporibus repudiandae possimus repellat aperiam deserunt, quaerat delectus facere labore eaque explicabo dolores deleniti! Vitae ea eveniet at atque alias voluptate quaerat consequuntur dolorem quibusdam ex qui veritatis assumenda, non deleniti harum beatae aperiam corporis deserunt earum sed iste quidem. Debitis voluptatum magni beatae modi architecto, nesciunt dicta facilis eius explicabo distinctio repudiandae recusandae commodi provident. Commodi ipsa nam sequi numquam aspernatur dicta, in odio tenetur corrupti voluptatum quis voluptates. Quae dolorum earum odio nobis accusantium doloremque obcaecati. Doloribus, ullam! Dolorem, ea fugiat.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia explicabo obcaecati magni, ex perspiciatis maiores similique qui, officiis eius exercitationem maxime delectus doloribus. Aut eos consectetur sint, distinctio, iste quasi officiis expedita voluptatibus delectus quis dolores, ad voluptatum iure veritatis enim. Sunt atque doloribus unde quae repellat sit dignissimos harum non tenetur quasi eos in mollitia ducimus, soluta velit. Ipsum quis quo sed magnam sunt officiis eius sapiente? Beatae fugiat quod saepe nesciunt voluptatibus molestiae maiores, voluptatum illum totam facere vel ullam fugit, vero eaque tenetur ab, exercitationem natus maxime nemo aspernatur quia rerum praesentium non nulla! Sapiente, libero incidunt.</div>
+    <div class="box"></div>
+    <div class="box bgImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rem est expedita. Deserunt provident officia iste, est ipsam ad culpa mollitia tenetur error placeat fugiat repudiandae quas nulla sapiente incidunt quod, nihil magnam? Velit fugit adipisci accusantium voluptas harum saepe ipsa, blanditiis nobis in et incidunt animi. Quis, nulla incidunt!</div>
+    <div class="box linearGRad"></div>
+    <div class="box radialGrad"></div>
+    <div class="box conicGrad"></div>
+</body>
+</html>
