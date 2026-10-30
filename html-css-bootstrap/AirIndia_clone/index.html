@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air India Clone | Book Flights</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top utility bar -->
+<div class="topbar">
+  <div class="container flex-between">
+    <span>Download the Air India app for faster booking</span>
+    <ul class="flex gap">
+      <li><a href="#">Tariff</a></li>
+      <li><a href="#">AI Biz</a></li>
+      <li><a href="#">English (India)</a></li>
+      <li><a href="#">Sign in</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container flex-between">
+    <a href="#" class="logo flex">
+      <span class="logo-mark">AI</span>
+      <span class="logo-text">Air India<small>The new Air India</small></span>
+    </a>
+    <nav>
+      <ul class="flex gap-lg">
+        <li><a href="#">Book</a></li>
+        <li><a href="#">Manage</a></li>
+        <li><a href="#">Check-in</a></li>
+        <li><a href="#">Flight status</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Maharaja Club</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn btn-red">Sign in</a>
+  </div>
+</header>
+
+<!-- Hero with booking widget -->
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Fly the all-new Air India</h1>
+    <p>Nonstop flights to 40+ countries, with fares that start low.</p>
+
+    <div class="booking">
+      <div class="tabs flex">
+        <button class="tab active">Book flight</button>
+        <button class="tab">Check-in</button>
+        <button class="tab">Manage booking</button>
+        <button class="tab">Flight status</button>
+      </div>
+
+      <div class="trip-type flex gap-lg">
+        <label><input type="radio" name="trip" checked> Round trip</label>
+        <label><input type="radio" name="trip"> One way</label>
+        <label><input type="radio" name="trip"> Multi city</label>
+      </div>
+
+      <form class="fields flex" onsubmit="return false">
+        <div class="field grow"><label>From</label><input type="text" value="Mumbai (BOM)"></div>
+        <div class="field grow"><label>To</label><input type="text" placeholder="Select destination"></div>
+        <div class="field"><label>Depart</label><input type="date"></div>
+        <div class="field"><label>Return</label><input type="date"></div>
+        <div class="field">
+          <label>Passengers</label>
+          <select>
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>2 Adults, 1 Child</option>
+          </select>
+        </div>
+        <button class="btn btn-red search">Search flights</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Offers -->
+<section class="section">
+  <div class="container">
+    <h2>Offers for you</h2>
+    <div class="cards flex wrap">
+      <article class="card">
+        <div class="card-img c1"></div>
+        <div class="card-body">
+          <h3>Domestic fares from ₹2,999</h3>
+          <p>Book 15 days ahead and save on select routes.</p>
+          <a href="#">View offer</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img c2"></div>
+        <div class="card-body">
+          <h3>Student discount</h3>
+          <p>Discount on the base fare for domestic flights between home and school.</p>
+          <a href="#">View offer</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img c3"></div>
+        <div class="card-body">
+          <h3>Earn more with Maharaja Club</h3>
+          <p>Collect points on every flight and redeem them for upgrades.</p>
+          <a href="#">Join now</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Destinations -->
+<section class="section alt">
+  <div class="container">
+    <h2>Popular destinations</h2>
+    <div class="dest flex wrap">
+      <a href="#" class="dest-item d1"><span>London<small>from ₹38,500</small></span></a>
+      <a href="#" class="dest-item d2"><span>Dubai<small>from ₹14,200</small></span></a>
+      <a href="#" class="dest-item d3"><span>Singapore<small>from ₹19,800</small></span></a>
+      <a href="#" class="dest-item d4"><span>New York<small>from ₹62,000</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section">
+  <div class="container">
+    <h2>Plan your journey</h2>
+    <div class="services flex wrap">
+      <a href="#" class="service"><b>Baggage</b><span>Allowance and rules</span></a>
+      <a href="#" class="service"><b>Seat selection</b><span>Pick your seat in advance</span></a>
+      <a href="#" class="service"><b>Meals</b><span>Choose your in-flight meal</span></a>
+      <a href="#" class="service"><b>Travel insurance</b><span>Add cover while booking</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container flex wrap footer-cols">
+    <div>
+      <h4>Book</h4>
+      <a href="#">Book flights</a><a href="#">Group booking</a><a href="#">Corporate travel</a>
+    </div>
+    <div>
+      <h4>Manage</h4>
+      <a href="#">Manage booking</a><a href="#">Web check-in</a><a href="#">Refunds</a>
+    </div>
+    <div>
+      <h4>About us</h4>
+      <a href="#">Our story</a><a href="#">Newsroom</a><a href="#">Careers</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#">Contact us</a><a href="#">FAQs</a><a href="#">Feedback</a>
+    </div>
+  </div>
+  <div class="container copy">This is a student practice clone and is not the official Air India website.</div>
+</footer>
+
+</body>
+</html>
