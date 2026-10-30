@@ -7,4 +7,4 @@ temp/
 
 # ignore all files of a type
 *.log
-*.zip
+
