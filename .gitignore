@@ -1,1 +1,10 @@
 
+# ignore a specific file
+notes.txt
+
+# ignore a folder
+temp/
+
+# ignore all files of a type
+*.log
+*.zip
