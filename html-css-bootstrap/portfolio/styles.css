@@ -40,6 +40,9 @@ header p{
     line-height: 1.8;
 }
 .btn{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     width: 300px;
     /* height: 100px; */
     padding: 20px 10px;
@@ -105,8 +108,36 @@ tr:nth-child(odd){
 
 }
 .techSkillDiv ul{
-    width: 100px;
+    width: fit-content;
+    max-width: 90%;
     margin: 20px auto;
+    text-align: left;
+}
+#about, #contact{
+    padding: 30px 0;
+}
+#about{
+    background-color: rgb(32, 32, 32);
+    clear: both;
+}
+#techSkill{
+    overflow: hidden;
+}
+.infoBox{
+    width: 80%;
+    margin: 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.infoBox h3{
+    color: orange;
+    margin-top: 15px;
+}
+.infoBox ul{
+    margin-left: 25px;
+}
+.infoBox a{
+    color: bisque;
 }
 
 
