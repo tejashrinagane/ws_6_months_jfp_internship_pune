@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Grid Assignments</title>
     <style>
         *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+        body{ font-family: Arial, Helvetica, sans-serif; }
+        h2.title{ margin: 30px 10px 10px; font-weight: normal; }
+
+        /* ================= YOUR ORIGINAL CODE (unchanged) ================= */
         div.layout{
             display: grid;
             grid-template-areas:'nav nav nav nav nav nav nav nav nav nav nav nav'
@@ -18,41 +22,14 @@
                                 'f f f f f f f f f f f f';
             gap:10px
         }
-        nav{
-            height: 100px;
-            background-color: pink;
-            grid-area: nav;
-        }
-        aside.leftAside{
-            height: 90vh;
-            background-color: rgb(154, 243, 255);
-            grid-area: ls;
-        }
-        aside.rightAside{
-            height: 90vh;
-            background-color: chocolate;
-            grid-area: rs;
-        }
-        main{
-            height: 50vh;
-            background-color: cornsilk;
-            grid-area: m;
-        }
-        .sectionOne{
-            border: 2px solid red;
-            height: 200px;
-            grid-area: s1;
-        }
-        .SectionTwo{
-            border: 2px solid green;
-            height:200px;
-            grid-area: s2;
-        }
-        footer{
-            height: 100px;
-            background-color: gray;
-            grid-area: f;
-        }
+        nav{ height: 100px; background-color: pink; grid-area: nav; }
+        aside.leftAside{ height: 90vh; background-color: rgb(154, 243, 255); grid-area: ls; }
+        aside.rightAside{ height: 90vh; background-color: chocolate; grid-area: rs; }
+        main{ height: 50vh; background-color: cornsilk; grid-area: m; }
+        .sectionOne{ border: 2px solid red; height: 200px; grid-area: s1; }
+        .SectionTwo{ border: 2px solid green; height:200px; grid-area: s2; }
+        footer{ height: 100px; background-color: gray; grid-area: f; }
+
         .containerCard{
             display: grid;
             justify-content: center;
@@ -63,153 +40,223 @@
             width: 90%;
             margin: 10px auto;
         }
-        .card{
-            /* display: inline-block; */
-            width: 18rem;
-            height: 320px;
-            border: 1px solid gray;
-        }
-        .card img{
-            width: 100%;
-            height: 50%;
-        }
-        .fruitsContainer{
-            display: grid;
-            /* grid-template-columns: 1fr 1fr 2fr;
-            grid-template-rows: 1fr 2fr 2fr; */
-            gap:10px
-        }
-        .grapes{
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-column-start: 1;
-            grid-column-end: 2;
-            background-color: rgb(55, 24, 55);
-            height: 100px;
-        }
-        .strawberry{
-            grid-row-start: 1;
-            grid-row-end: 2;
-            grid-column-start: 2;
-            grid-column-end: 3;
-            background-color: rgb(157, 41, 66);
-            height: 100px
-        }
-        .watermelon{
-            grid-row-start: 1;
-            grid-row-end: 3;
-            grid-column-start: 3;
-            grid-column-end: 4;
-            background-color: red;
-            height: 200px;
-        }
-        .orange{
-            grid-row-start: 2;
-            grid-row-end: 3;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            background-color: orange;
-            height: 100px
-        }
-        .papaya{
-            grid-row-start: 3;
-            grid-row-end: 4;
-            grid-column-start: 1;
-            grid-column-end: 3;
-            background-color: rgb(198, 147, 28);
-            height: 150px;
-        }
-        .pinapple{
-            grid-row-start: 3;
-            grid-row-end: 4;
-            grid-column-start: 3;
-            grid-column-end: 4;
-            background-color: rgb(67, 50, 27);
-            height: 150px;
+        .card{ width: 18rem; height: 320px; border: 1px solid gray; }
+        .card img{ width: 100%; height: 50%; }
 
+        .fruitsContainer{ display: grid; gap:10px }
+        .grapes{ grid-row: 1 / 2; grid-column: 1 / 2; background-color: rgb(55, 24, 55); height: 100px; }
+        .strawberry{ grid-row: 1 / 2; grid-column: 2 / 3; background-color: rgb(157, 41, 66); height: 100px }
+        .watermelon{ grid-row: 1 / 3; grid-column: 3 / 4; background-color: red; height: 200px; }
+        .orange{ grid-row: 2 / 3; grid-column: 1 / 3; background-color: orange; height: 100px }
+        .papaya{ grid-row: 3 / 4; grid-column: 1 / 3; background-color: rgb(198, 147, 28); height: 150px; }
+        .pinapple{ grid-row: 3 / 4; grid-column: 3 / 4; background-color: rgb(67, 50, 27); height: 150px; }
+
+        /* ================= NEW 1: BLOG TILES (6-column grid) ================= */
+        .tiles{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 120px;
+            gap: 8px;
+            width: 90%;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+        .tile{
+            color: white;
+            font-size: 13px;
+            padding: 10px;
+            position: relative;
+        }
+        .tile small{ position: absolute; right: 10px; bottom: 8px; font-size: 9px; }
+        .t1{ grid-column: span 2; background: linear-gradient(135deg, #02021a, #0a3a9e); }
+        .t2{ grid-column: span 4; background: linear-gradient(180deg, #e8806a, #d97a5a, #b0624e); }
+        .t3{ grid-column: span 4; background: linear-gradient(135deg, #0a5a9e, #4fb0e0, #0a3a6e); }
+        .t4{ grid-column: span 2; background: linear-gradient(180deg, #d9777a, #b04a4e); }
+        .t5{ grid-column: span 2; background: #c43b3b; }
+        .t6{ grid-column: span 2; background: #0a0a0a; }
+        .t7{ grid-column: span 2; background: #b85a5a; }
+
+        /* ================= NEW 2: PORTRAIT MOSAIC (3 columns) ================= */
+        .mosaic{
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr;
+            grid-template-rows: 1.5fr 1fr 1fr;
+            gap: 8px;
+            width: 300px;
+            height: 380px;
+            padding: 8px;
+            margin: 10px auto;
+            background-color: #eee;
+        }
+        .mosaic div{ background-color: #999; }
+        .p1{ background: #a89f98; }
+        .p2{ background: #2f7a6a; grid-column: 2; grid-row: 1; border: 3px solid #d63a4a; }
+        .p3{ background: #4a2a2a; }
+        .p4{ background: #c86a3a; }
+        .p5{ background: #e88aa0; }
+        .p6{ background: #aab0b8; }
+        .p7{ background: #6a8a6a; }
+        .p8{ background: #3a3a5a; }
+        .p9{ background: #8a2a1a; }
+
+        /* ================= NEW 3: PAGE LAYOUT (Header, Nav, 3 columns, Footer) ================= */
+        .pageLayout{
+            display: grid;
+            grid-template-areas:
+                "hd hd hd"
+                "nv nv nv"
+                "lc mc rc"
+                "ft ft ft";
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 70px 50px 300px 60px;
+            gap: 8px;
+            width: 90%;
+            max-width: 700px;
+            margin: 10px auto 40px;
+            padding: 8px;
+            border: 4px solid #222;
+        }
+        .pageLayout > div{
+            border: 2px solid #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3a9a2a;
+            text-align: center;
+        }
+        .hd{ grid-area: hd; }
+        .nv{ grid-area: nv; }
+        .lc{ grid-area: lc; }
+        .mc{ grid-area: mc; }
+        .rc{ grid-area: rc; }
+        .ft{ grid-area: ft; }
+
+
+        /* ================= IMAGES ================= */
+        .fruitsContainer img, .mosaic img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+        .tile{ overflow: hidden; }
+        .tile img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+        .tile::after{ content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.25); z-index: -1; }
+        .tile{ isolation: isolate; }
+
+        /* Small screens: stack the page layout */
+        @media (max-width: 600px){
+            .pageLayout{
+                grid-template-areas: "hd" "nv" "lc" "mc" "rc" "ft";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .pageLayout > div{ min-height: 60px; }
         }
     </style>
 </head>
 <body>
 
+    <h2 class="title">Fruits grid</h2>
     <div class="fruitsContainer">
-        <div class="grapes"></div>
-        <div class="strawberry"></div>
-        <div class="watermelon"></div>
-        <div class="orange"></div>
-        <div class="papaya"></div>
-        <div class="pinapple"></div>
+        <div class="grapes"><img src="images/grapes.png" alt="fruit"></div>
+        <div class="strawberry"><img src="images/strawberry.png" alt="fruit"></div>
+        <div class="watermelon"><img src="images/watermelon.png" alt="fruit"></div>
+        <div class="orange"><img src="images/orange.png" alt="fruit"></div>
+        <div class="papaya"><img src="images/papaya.png" alt="fruit"></div>
+        <div class="pinapple"><img src="images/pineapple.png" alt="fruit"></div>
     </div>
 
+    <h2 class="title">Cards</h2>
     <div class="containerCard">
         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
-            <button>Read More</button>
-        </div>
-         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
-            <button>Read More</button>
-        </div>
-         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
-            <button>Read More</button>
-        </div>
-         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
-            <button>Read More</button>
-        </div>
-         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
+            <img src="images/card1.png" alt="card 1">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
             <button>Read More</button>
         </div>
         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
+            <img src="images/card2.png" alt="card 2">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
             <button>Read More</button>
         </div>
         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
+            <img src="images/card3.png" alt="card 3">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
             <button>Read More</button>
         </div>
         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
+            <img src="images/card4.png" alt="card 4">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
             <button>Read More</button>
         </div>
         <div class="card">
-            <img src="../assets/gold-plus.jpeg" alt="">
+            <img src="images/card5.png" alt="card 5">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/card6.png" alt="card 6">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/card7.png" alt="card 7">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/card8.png" alt="card 8">
             <h3>Lorem ipsum dolor sit amet.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, minima.</p>
             <button>Read More</button>
         </div>
     </div>
 
+    <h2 class="title">Blog tiles</h2>
+    <div class="tiles">
+        <div class="tile t1"><img src="images/tile1.png" alt="tile 1">The winter of my discontent<small>READ POST</small></div>
+        <div class="tile t2"><img src="images/tile2.png" alt="tile 2">Instagram is toxic but I keep posting<small>READ POST</small></div>
+        <div class="tile t3"><img src="images/tile3.png" alt="tile 3">Throwing my phone into the ocean<small>READ POST</small></div>
+        <div class="tile t4"><img src="images/tile4.png" alt="tile 4">I'm never leaving my room<small>READ POST</small></div>
+        <div class="tile t5"><img src="images/tile5.png" alt="tile 5">Staring at the horizon thinking<small>READ POST</small></div>
+        <div class="tile t6"><img src="images/tile6.png" alt="tile 6">This is water<small>READ POST</small></div>
+        <div class="tile t7"><img src="images/tile7.png" alt="tile 7">Table for one please<small>READ POST</small></div>
+    </div>
 
+    <h2 class="title">Portrait mosaic</h2>
+    <div class="mosaic">
+        <div class="p1"><img src="images/p1.png" alt="portrait 1"></div>
+        <div class="p2"><img src="images/p2.png" alt="portrait 2"></div>
+        <div class="p3"><img src="images/p3.png" alt="portrait 3"></div>
+        <div class="p4"><img src="images/p4.png" alt="portrait 4"></div>
+        <div class="p5"><img src="images/p5.png" alt="portrait 5"></div>
+        <div class="p6"><img src="images/p6.png" alt="portrait 6"></div>
+        <div class="p7"><img src="images/p7.png" alt="portrait 7"></div>
+        <div class="p8"><img src="images/p8.png" alt="portrait 8"></div>
+        <div class="p9"><img src="images/p9.png" alt="portrait 9"></div>
+    </div>
+
+    <h2 class="title">Page layout (Header, Navigation, Content, Footer)</h2>
+    <div class="pageLayout">
+        <div class="hd">Header</div>
+        <div class="nv">Navigation Menu</div>
+        <div class="lc">Content</div>
+        <div class="mc">Main Content</div>
+        <div class="rc">Content</div>
+        <div class="ft">Footer</div>
+    </div>
+
+    <h2 class="title">Your original layout (nav, asides, main, sections, footer)</h2>
     <div class="layout">
-    <nav></nav>
-    <aside class="leftAside"></aside>
-    <main></main>
-    <section class="sectionOne"></section>
-    <section class="SectionTwo"></section>
-    <aside class="rightAside"></aside>
-    <footer></footer>
+        <nav></nav>
+        <aside class="leftAside"></aside>
+        <main></main>
+        <section class="sectionOne"></section>
+        <section class="SectionTwo"></section>
+        <aside class="rightAside"></aside>
+        <footer></footer>
     </div>
 </body>
 </html>
-
-
-EQYTPU
